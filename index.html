@@ -4,142 +4,124 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy - KAARYA</title>
+    <title>KAARYA</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="fav.png" type="image/png" />
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f6fa;
+        }
+
+        /* Navbar Container */
+        nav {
+            background-color: #2563eb;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        /* Brand */
+        .brand {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Hamburger Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: white;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* Responsive Nav */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                background-color: #2563eb;
+                flex-direction: column;
+                width: 100%;
+                padding: 1rem 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="wrapper">
-        <nav class="sidebar">
-            <h3>On This Page</h3>
-            <ul>
-                <li><a href="#intro">1. Introduction</a></li>
-                <li><a href="#info">2. Information We Collect</a></li>
-                <li><a href="#usage">3. How We Use Your Information</a></li>
-                <li><a href="#share">4. How We Share Your Information</a></li>
-                <li><a href="#security">5. Data Storage and Security</a></li>
-                <li><a href="#choices">6. Your Choices</a></li>
-                <li><a href="#children">7. Children’s Privacy</a></li>
-                <li><a href="#changes">8. Changes to This Policy</a></li>
-                <li><a href="#contact">9. Contact Us</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <a href="/" class="brand">KAARYA</a>
 
-        <main class="content">
-            <h1>Privacy Policy</h1>
-            <p><strong>Last Updated:</strong> May 18, 2025</p>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-            <section id="intro">
-                <h2>1. Introduction</h2>
-                <p>Welcome to <strong>KAARYA</strong> This Privacy Policy explains how we collect, use, disclose, and
-                    safeguard your information when you use our mobile application designed to connect service providers
-                    and workers, especially in rural areas.</p>
-                <p>By using our app, you agree to the collection and use of information in accordance with this Privacy
-                    Policy. If you do not agree, please do not use the app.</p>
-            </section>
+        <div class="nav-links" id="navLinks">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/delete-account.html">Delete Account Policy</a>
+        </div>
+    </nav>
 
-            <section id="info">
-                <h2>2. Information We Collect</h2>
-
-                <h3>a. Personal Information</h3>
-                <ul>
-                    <li>Full Name</li>
-                    <li>Mobile Number</li>
-                    <li>Profile Photo</li>
-                    <li>Location (GPS or manual input)</li>
-                    <li>Address or village/town name</li>
-                    <li>Work preferences or skill categories</li>
-                </ul>
-
-                <h3>b. Service Information</h3>
-                <ul>
-                    <li>Details of services you post (description, location, dates, price)</li>
-                    <li>Applications made by workers or received by employers</li>
-                    <li>Reviews, ratings, and feedback</li>
-                </ul>
-
-                <h3>c. Device & Technical Data</h3>
-                <ul>
-                    <li>Device ID</li>
-                    <li>App version</li>
-                    <li>Operating system and device model</li>
-                </ul>
-
-                <h3>d. Location Data</h3>
-                <p>We collect approximate or precise location data (with permission) to:</p>
-                <ul>
-                    <li>Show nearby services or workers</li>
-                    <li>Improve local matching accuracy</li>
-                </ul>
-                <p>You may choose to deny location access, but some features may not work correctly.</p>
-            </section>
-
-            <section id="usage">
-                <h2>3. How We Use Your Information</h2>
-                <ul>
-                    <li>Create and manage your account</li>
-                    <li>Enable posting, searching, and applying to services</li>
-                    <li>Facilitate communication between employers and workers</li>
-                    <li>Improve app functionality and user experience</li>
-                    <li>Prevent fraud and ensure user safety</li>
-                    <li>Comply with legal obligations</li>
-                </ul>
-            </section>
-
-            <section id="share">
-                <h2>4. How We Share Your Information</h2>
-                <ul>
-                    <li>With other users (e.g., public profiles)</li>
-                    <li>With authorities if required by law or legal processes</li>
-                </ul>
-            </section>
-
-            <section id="security">
-                <h2>5. Data Storage and Security</h2>
-                <p>We use secure servers and modern security practices to protect your data. However, no method of
-                    transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
-                <p>Your data is stored in India and processed according to applicable data
-                    protection laws.</p>
-            </section>
-
-            <section id="choices">
-                <h2>6. Your Choices</h2>
-                <ul>
-                    <li>View and update your profile information</li>
-                    <li>Delete your account at any time via app settings or by contacting us</li>
-                    <li>Deny permissions (e.g., location), though some features may be limited</li>
-                </ul>
-                <p>To request deletion or review of your data, please email us at <a
-                        href="mailto:abhishek.tech010@gmail.com">abhishek.tech010@gmail.com</a>.</p>
-            </section>
-
-            <section id="children">
-                <h2>7. Children’s Privacy</h2>
-                <p>This app is not intended for users under the age of 13. We do not knowingly collect personal data
-                    from children.</p>
-            </section>
-
-            <section id="changes">
-                <h2>8. Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy from time to time. Any changes will be posted in this section, and
-                    you will be notified if significant changes occur.</p>
-            </section>
-
-            <section id="contact">
-                <h2>9. Contact Us</h2>
-                <p>If you have any questions or concerns about this policy, please contact us at:</p>
-                <p><strong>Email:</strong> <a href="mailto:abhishek.tech010@gmail.com">abhishek.tech010@gmail.com</a><br>
-                    <strong>Address:</strong> KAARYA, Jalesar Etah Uttar Predesh India 207302
-                </p>
-            </section>
-
-            <footer>
-                © 2025 KAARYA. All rights reserved.
-            </footer>
-        </main>
+    <!-- Page content here -->
+    <div style="padding: 2rem;">
+        <h1>Welcome to KAARYA</h1>
+        <p>This is your homepage. Use the navigation above to explore the policy pages.</p>
     </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 
 </body>
 
